@@ -15,3 +15,18 @@ const vat = new web3.eth.Contract(abi, vatAddr);
 vat.methods.debt().call().then(
   supply => console.log(supply/Math.pow(10,45))
 );
+
+
+
+const erc20daiAddr = '0x6B175474E89094C44Da98b954EedeAC495271d0F';
+const ercabi = [{
+  "inputs": [],
+  "name": "totalSupply",
+  "outputs": [{"name": "", "type": "uint256"}],
+  "type": "function"
+}];
+
+const erc20dai = new web3.eth.Contract(ercabi, erc20daiAddr);
+erc20dai.methods.totalSupply().call().then(
+  supply => console.log(supply/Math.pow(10,18))
+);
