@@ -16,8 +16,6 @@ vat.methods.debt().call().then(
   supply => console.log(supply/Math.pow(10,45))
 );
 
-
-
 const erc20daiAddr = '0x6B175474E89094C44Da98b954EedeAC495271d0F';
 const ercabi = [{
   "inputs": [],
