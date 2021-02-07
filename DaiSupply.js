@@ -28,5 +28,3 @@ const erc20dai = new web3.eth.Contract(ercabi, erc20daiAddr);
 erc20dai.methods.totalSupply().call().then(
   supply => console.log(supply/Math.pow(10,18))
 );
-
-//.................
